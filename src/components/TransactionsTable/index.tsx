@@ -6,7 +6,7 @@ interface Transaction {
     id: number,
     title: string,
     amount: number,
-    type: 'deposit' | 'withdraw',
+    type: "deposit" | "withdraw",
     category: string,
     createdAt: Date
 }
@@ -15,7 +15,7 @@ export function TransactionsTable() {
     const [transactions, setTransactions] = useState<Transaction[]>([]);
 
     useEffect(() => {
-        api.get('transactions')
+        api.get("transactions")
             .then(response => setTransactions(response.data));
     }, []);
     return(
