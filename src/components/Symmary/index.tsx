@@ -44,7 +44,7 @@ export function Summary () {
                     <img src={outcomeImg} alt="saidas" />
                 </header>
 
-                <strong>- {new Intl.NumberFormat('pt-BR', {
+                <strong>{summary.withdraws > 0?'-': '' }{ new Intl.NumberFormat('pt-BR', {
                                 style: 'currency',
                                 currency: 'BRL'
                             }).format(summary.withdraws)}</strong>
